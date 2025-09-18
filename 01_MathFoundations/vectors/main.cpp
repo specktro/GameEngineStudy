@@ -5,15 +5,18 @@
 #include "vector2d.h"
 
 int main() {
-    std::cout << "Vector2D Test Program" << std::endl;
-
     Vector2D v1(3.0f, 4.0f);
     Vector2D v2(1.0f, 2.0f);
 
-    std::cout << "v1: (" << v1.getX() << ", " << v1.getY() << ")" << std::endl;
-    std::cout << "v2: (" << v2.getX() << ", " << v2.getY() << ")" << std::endl;
+    Vector2D sum = v1 + v2;      // Should be (4, 6)
+    Vector2D diff = v1 - v2;     // Should be (2, 2)
+    float len = v1.length();     // Should be 5.0
+    float dot = v1.dot(v2);      // Should be 11.0
 
-    // We'll test the operations as we implement them
+    std::cout << "Sum: (" << sum.getX() << ", " << sum.getY() << ")" << std::endl;
+    std::cout << "Diff: (" << diff.getX() << ", " << diff.getY() << ")" << std::endl;
+    std::cout << "Length of v1: " << len << std::endl;
+    std::cout << "Dot product: " << dot << std::endl;
 
     return 0;
 }
