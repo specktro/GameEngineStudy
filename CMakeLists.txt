@@ -4,8 +4,15 @@ project(GameEngineStudy)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Math Foundations
-add_subdirectory(01_MathFoundations)
+# Vector math executable
+add_executable(vector_test
+        01_MathFoundations/vectors/vector2d.cpp
+        01_MathFoundations/vectors/main.cpp
+)
 
-# C++ Refresh
-add_subdirectory(02_CppRefresh)
+target_include_directories(vector_test PRIVATE 01_MathFoundations/vectors)
+
+# C++ assessment executable
+add_executable(cpp_assessment
+        02_CppRefresh/modern_features/cpp_assessment.cpp
+)
