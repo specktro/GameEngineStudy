@@ -12,7 +12,11 @@ Building a game engine from scratch in C++ to understand graphics programming, g
 - ✅ Basic CMake project structure
 - ✅ Skeleton Vector2D class created
 
-**Next Steps:**
-- Implement Vector2D operations
+**Day 2 - Vector2D**
+- ✅ Implement Vector2D operations
+
+**Day 3 - Modern C++**
 - C++ modern features assessment
+
+**Next Steps:**
 - Mathematics baseline evaluation
