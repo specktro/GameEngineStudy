@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /Users/specktro/CLionProjects/GameEngineStudy/01_MathFoundations Select CMakeLists.txt
