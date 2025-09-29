@@ -19,9 +19,9 @@ public:
     float angleBetween(const Vector2D& other) const;  // Angle in radians
     Vector2D scale(float factor) const;   // Multiply by scalar
 
-    // Static utility methods
-    static Vector2D lerp(const Vector2D& a, const Vector2D& b, float t);  // Linear interpolation
-    static Vector2D fromAngle(float angleRadians);  // Create vector from angle
+    // Static functions - declared WITH 'static'
+    static Vector2D lerp(const Vector2D& a, const Vector2D& b, float t);
+    static Vector2D fromAngle(float angleRadians);
 
     // Getters for testing
     float getX() const { return x; }
