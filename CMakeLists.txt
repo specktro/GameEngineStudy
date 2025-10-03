@@ -8,6 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(vector_test
         01_MathFoundations/vectors/vector2d.cpp
         01_MathFoundations/vectors/main.cpp
+        01_MathFoundations/vectors/vector3d.cpp
+        01_MathFoundations/vectors/vector3d.h
 )
 
 target_include_directories(vector_test PRIVATE 01_MathFoundations/vectors)
