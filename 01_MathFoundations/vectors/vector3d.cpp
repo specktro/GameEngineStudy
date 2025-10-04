@@ -31,7 +31,7 @@ float Vector3D::dot(const Vector3D& other) const {
 Vector3D Vector3D::normalize() const {
     float len = length();
 
-    if (len == 0) {
+    if (len < std::numeric_limits<float>::epsilon() * 10) {
         return {0, 0, 0};
     }
 
@@ -39,15 +39,10 @@ Vector3D Vector3D::normalize() const {
 }
 
 float Vector3D::distanceTo(const Vector3D& other) const {
-    return std::sqrt((x - other.x) * (x - other.x) + (y - other.y) * (y - other.y) + (z - other.z) * (z - other.z));
+    return (other - *this).length();
 }
 
-// THE NEW ONE - Cross Product
 Vector3D Vector3D::cross(const Vector3D& other) const {
-    // Formula:
-    // result.x = a.y * b.z - a.z * b.y
-    // result.y = a.z * b.x - a.x * b.z
-    // result.z = a.x * b.y - a.y * b.x
     return {
         y * other.z - z * other.y,
         z * other.x - x * other.z,
