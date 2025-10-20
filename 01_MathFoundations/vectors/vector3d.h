@@ -23,9 +23,11 @@ public:
     float dot(const Vector3D& other) const;
     Vector3D normalize() const;
     float distanceTo(const Vector3D& other) const;
-
-    // NEW - The star of 3D: Cross Product!
     Vector3D cross(const Vector3D& other) const;
+    bool isZero() const;
+    bool isNormalized() const;
+    Vector3D reflect(const Vector3D& normal) const;
+    Vector3D project(const Vector3D& onto) const;
 
     // Getters
     float getX() const { return x; }

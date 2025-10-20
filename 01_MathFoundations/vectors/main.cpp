@@ -115,6 +115,26 @@ void testCameraLookDirection() {
     std::cout << "These three vectors form the camera's coordinate system!" << std::endl;
 }
 
+void testAdvancedOperations() {
+    // Test isNormalized
+    Vector3D unit(1, 0, 0);
+    Vector3D almostUnit(0.99999f, 0, 0);
+    std::cout << "Unit vector normalized? " << unit.isNormalized() << std::endl;  // true
+    std::cout << "Almost unit normalized? " << almostUnit.isNormalized() << std::endl;  // true
+
+    // Test reflect
+    Vector3D incoming(1, -1, 0);  // 45° down-right
+    Vector3D normal(0, 1, 0);     // Ground normal (up)
+    Vector3D reflected = incoming.reflect(normal);
+    std::cout << "Reflected: "; reflected.print();  // Should be (1, 1, 0) - bounced up
+
+    // Test project
+    Vector3D v(3, 4, 0);
+    Vector3D onto(1, 0, 0);  // X-axis
+    Vector3D projection = v.project(onto);
+    std::cout << "Projection: "; projection.print();  // Should be (3, 0, 0)
+}
+
 int main() {
     testAdvancedVectorOperations();
 
@@ -122,6 +142,7 @@ int main() {
     testCrossProduct();
     testSurfaceNormal();
     testCameraLookDirection();
+    testAdvancedOperations();
 
     return 0;
 }
