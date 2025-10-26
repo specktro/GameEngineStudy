@@ -10,6 +10,7 @@ public:
 
     Vector2D operator+(const Vector2D& other) const;
     Vector2D operator-(const Vector2D& other) const;
+    Vector2D operator*(float factor) const;
     float length() const;
     float dot(const Vector2D& other) const;
 

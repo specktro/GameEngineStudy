@@ -8,6 +8,10 @@ Vector2D::Vector2D(float x, float y) : x(x), y(y) {
     // Constructor implementation
 }
 
+Vector2D Vector2D::operator*(float factor) const {
+    return {x * factor, y * factor};
+}
+
 Vector2D Vector2D::operator+(const Vector2D& other) const {
     return {x + other.x, y + other.y};
 }
